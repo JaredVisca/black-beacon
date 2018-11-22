@@ -1,4 +1,4 @@
-import os, json, sys, blackbeaconping, blackbeaconreport, blackbeaconanalyze, blackbeaconclass
+import os, json, sys, ping, report, analyze, beacon
 
 def report_builder(urls):
     blackbeaconreport.black_beacon_report(urls)
