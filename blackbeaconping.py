@@ -14,8 +14,8 @@ def black_beacon_ping_url(urls):
         except urllib2.HTTPError, e:
             url.set_http_status(e.code)
             url.set_message('%s\'s url, %s, had a response time of %sms and returned a %s.' % (url.get_title(), url.get_url(), url.get_response_time(), url.get_http_status()))
-		except ssl.SSLError, e:
-			url.set_message('%s\'s url, %s, timed out (timeout is set to 17 seconds).' % (url.get_title(), url.get_url()))
+        except ssl.SSLError, e:
+            url.set_message('%s\'s url, %s, timed out (timeout is set to 17 seconds).' % (url.get_title(), url.get_url()))
         except urllib2.URLError, e:
             url.set_message('%s\'s url, %s, had a response time of %sms and returned a %s.  This webservice also returned an error: %s' % (url.get_title(), url.get_url(), url.get_response_time(), url.get_http_status(), e.reason))
     return urls
